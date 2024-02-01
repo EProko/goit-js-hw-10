@@ -29,7 +29,16 @@ flatpickr(dateInput, options);
 function checkData() {
   if (Date.now() >= userSelectedDate.getTime()) {
     iziToast.show({
+      title: 'Error',
+      titleColor: '#FFF',
+      titleSize: '16',
       message: 'Please choose a date in the future',
+      messageColor: '#FFF',
+      messageSize: '16',
+      backgroundColor: '#EF4040',
+      position: 'topRight',
+      icon: 'ico-error',
+      iconColor: '#FFF',
     });
     startBtn.disabled = true;
     return false;
